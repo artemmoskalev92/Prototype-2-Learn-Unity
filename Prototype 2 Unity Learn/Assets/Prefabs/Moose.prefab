@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 1041099760542706605}
   - component: {fileID: 3021719073271495408}
   - component: {fileID: 1449893469128913830}
-  - component: {fileID: 3364144688191411337}
+  - component: {fileID: 17646908628153118}
   m_Layer: 0
   m_Name: Moose
   m_TagString: Animal
@@ -458,7 +458,7 @@ Transform:
   - {fileID: 697274033742337928}
   - {fileID: 697274033742336054}
   - {fileID: 697274033742289450}
-  - {fileID: 2760792048288738112}
+  - {fileID: 6559803204548438918}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92aba4ade9349f642bd8c21b8d1ef00a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3364144688191411337
+--- !u!114 &17646908628153118
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8319611dc26676a4ebe2ddb5cdbfa8bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hungerSlider: {fileID: 6997411084617382378}
+  hungerSlider: {fileID: 2036361168159963436}
   amountToBeFed: 3
 --- !u!1 &697274033742598066
 GameObject:
@@ -960,7 +960,7 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000000014901161, y: -0.0060133934, z: 0.15180789}
     m_Extent: {x: 0.07322168, y: 0.22837326, z: 0.25252885}
   m_DirtyAABB: 0
---- !u!1001 &7503251567472648329
+--- !u!1001 &1547461960062509135
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1037,7 +1037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5652204683056417737, guid: e390b65b189e56c49a0f6c84d40f5fb5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5652204683056417737, guid: e390b65b189e56c49a0f6c84d40f5fb5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1061,15 +1061,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e390b65b189e56c49a0f6c84d40f5fb5, type: 3}
---- !u!224 &2760792048288738112 stripped
+--- !u!224 &6559803204548438918 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5652204683056417737, guid: e390b65b189e56c49a0f6c84d40f5fb5, type: 3}
-  m_PrefabInstance: {fileID: 7503251567472648329}
+  m_PrefabInstance: {fileID: 1547461960062509135}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6997411084617382378 stripped
+--- !u!114 &2036361168159963436 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 665173496391162211, guid: e390b65b189e56c49a0f6c84d40f5fb5, type: 3}
-  m_PrefabInstance: {fileID: 7503251567472648329}
+  m_PrefabInstance: {fileID: 1547461960062509135}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1

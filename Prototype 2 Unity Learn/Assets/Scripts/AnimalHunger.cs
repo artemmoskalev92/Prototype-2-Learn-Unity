@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class AnimalHunger : MonoBehaviour
 {
-
     public Slider hungerSlider;
     public int amountToBeFed;
+
     private int currentFedAmount = 0;
     private GameManager gameManager;
 
@@ -17,14 +17,16 @@ public class AnimalHunger : MonoBehaviour
         hungerSlider.maxValue = amountToBeFed;
         hungerSlider.value = 0;
         hungerSlider.fillRect.gameObject.SetActive(false);
+
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
+
     public void FeedAnimal(int amount)
     {
         currentFedAmount += amount;
