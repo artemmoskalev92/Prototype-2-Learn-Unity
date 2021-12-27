@@ -3,11 +3,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject projectilePrefab;
+    
 
-    public float horizontalInput;
-    public float speed = 10.0f;
-    public float xRange = 10.0f;
+    private float horizontalInput;
+    private float verticalInput;
+    private float speed = 10.0f;
+    private float xRange = 10.0f;
+    private float zRange = 9.0f;
 
+    public Transform projectileSpawnPoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,14 +29,25 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
+        if (transform.position.z < -zRange)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, -zRange);
+        }
+        if (transform.position.z > zRange)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zRange);
+        }
 
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+        verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
+
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //Launch a projectile from the player
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
         }
     }
 }
